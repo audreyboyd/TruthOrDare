@@ -4,14 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>ToD</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Dare</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="newDare();" >
     <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: rgb(4,2,2);">
         <div class="container"><a class="navbar-brand" href="#" style="border-color: rgb(10,10,10);color: rgb(247,242,242);">Truth or Dare</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
@@ -23,10 +20,13 @@
     <div class="text-center" style="height: 50px;padding-top: 0px;margin-top: 250px;">
         <h1 class="text-center">DARE</h1>
     </div>
-    <div style="height: 75px;"></div>
-    <div class="text-center" style="height: 50px;margin-top: 20px;"><button class="btn btn-primary" type="button" style="height: 50px;width: 230px;background: rgb(7,1,1);">HOME</button></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <div id="insertDare" style="height: 75px;font-family: sans-serif;font-size: 20px;text-align: center;">
+    </div>
+    <div class="text-center" style="height: 50px;margin-top: 20px;">
+        <button class="btn btn-primary" onclick="location.href='index.html'" type="button" style="height: 50px;width: 230px;background: rgb(7,1,1);">BACK</button>
+    </div>
+    <script src="dares.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
