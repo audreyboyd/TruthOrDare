@@ -32,4 +32,5 @@ function readyPlayer(){
     // }
     var player1Text = sessionStorage.getItem("player1");
     document.getElementById("playerText").innerHTML = player1Text + ", you're up!";
+    window.location.href = '/start.html';
 }
