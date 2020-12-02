@@ -8,34 +8,49 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<div style="font-size: 20px;">
     <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: rgb(4,2,2);">
-        <div class="container"><a class="navbar-brand" href="#" style="border-color: rgb(10,10,10);color: rgb(247,242,242);">Truth or Dare</a>
-            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
-                <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="container"><a class="navbar-brand" href="#" style="border-color: rgb(10,10,10);color: rgb(247,242,242);">Truth or Dare</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
-                class="collapse navbar-collapse" id="navcol-1">
+                    class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto"></ul>
-        </div>
+            </div>
         </div>
     </nav>
-    <!-- Buttons for selecting truth or dare OnClick -->
-    <h1 class="text-center" style="margin-top: 150px;">Player, you're up!</h1>
-    <div class="text-center" onclick="location.href='truth.html'" style="height: 50px;padding-top: 0px;margin-top: 50px;">
-        <button class="btn btn-primary" type="button" style="height: 50px;width: 230px;background: rgb(8,12,16);">TRUTH</button>
-    </div>
-    <div style="height: 50px;">
-        <h1 class="text-center">or</h1>
-    </div>
-    <div class="text-center" onclick="location.href='dare.html'" style="height: 50px;margin-top: 5px;">
-        <button class="btn btn-primary" type="button" style="height: 50px;width: 230px;background: rgb(7,1,1);">DARE</button>
-    </div>
-    <script src="player.js"></script>
-    <script src="play.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</div>
+<h1 class="text-center" style="margin-top: 100px;">How many players are going to play?</h1>
+<div class="text-center" style="height: 50px;padding-top: 0px;margin: 0;margin-top: 50px;border-style: none;">
+    <button id="btn1" onclick="select1Player();" class="btn btn-primary" type="button" style="height: 50px;width: 100px;background: rgb(7,1,1);border-style: none;">1</button>
+    <button id="btn2" onclick="select2Player();" class="btn btn-primary" type="button" style="height: 50px;width: 100px;background: rgb(8,12,16);margin-left: 40px;border-style: none;">2</button>
+    <button id="btn3" onclick="select3Player();" class="btn btn-primary" type="button" style="height: 50px;width: 100px;background: rgb(8,12,16);margin-left: 40px;border-style: none;">3</button>
+    <button id="btn4" onclick="select4Player();" class="btn btn-primary" type="button" style="height: 50px;width: 100px;background: rgb(8,12,16);margin-left: 40px;border-style: none;">4</button>
+</div>
+<div style="height: 50px;">
+    <h1 id="playerText" class="text-center" style="font-size: 30px;margin-top: 30px;display:none;">Enter the player's name(s)</h1>
+</div>
+<div id="player1Div" class="text-center" style="height: 50px;margin-top: 1px;display:none;">
+    <h3 class="text-center d-inline-block" style="margin-right: 15px;display:none;">Player 1:</h3>
+    <input id="player1Name" type="text">
+    <button id="btn1play" onclick="readyPlayer();" class="btn btn-primary d-inline-block" type="button" style="height: 50px;width: 100px;background: rgb(8,12,16);margin-left: 40px;border-style: none;">add</button>
+</div>
+<div id="player2Div" class="text-center" style="height: 50px;margin-top: 1px;display:none;">
+    <h3 class="d-inline-block" style="margin-right: 15px;">Player 2:</h3>
+    <input id="player2Name" type="text"></div>
+<div id="player3Div" class="text-center" style="height: 50px;margin-top: 1px;display:none;">
+    <h3 class="d-inline-block" style="margin-right: 15px;">Player 3:</h3>
+    <input id="player3Name" type="text"></div>
+<div id="player4Div" class="text-center" style="height: 50px;margin-top: 1px;display:none;">
+    <h3 class="d-inline-block" style="margin-right: 15px;">Player 4:</h3>
+    <input id="player4Name" type="text"></div>
+<div id="divStart" onclick="location.href='start.html'" class="text-center" style="height: 50px; margin-top: 1px;display:none;">
+    <input id="btnStart" type="button" value="Start" class="btn btn-primary" style="height: 50px;width: 150px;background: rgb(8,12,16);margin-left: 40px;border-style: none;"></input>
+</div>
+<script src="player.js"></script>
+<script src="play.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 
 </html>
